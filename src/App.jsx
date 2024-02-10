@@ -17,6 +17,7 @@ console.log("humidity", humidity, "resolved address is", resolvedAddress, "descr
 const today = days[0]
 
 
+
  const currentDate0 = new Date()
  const currentDate = currentDate0.toDateString()
  

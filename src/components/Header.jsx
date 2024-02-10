@@ -13,26 +13,49 @@ function Header() {
         .catch((err)=>{
             console.log(err)
         })
+
+
     }, [])
 
-    const {fetchedData, setFetchedData} = useContext(WeatherContext)
+    const {setFetchedData} = useContext(WeatherContext)
 
+
+  
+
+    
     const [location, setLocation] = useState('')
+    const [searches, setSearches] = useState([])
+    
+
 
     async function handleSubmit(){
+        
+        setSearches([...searches, location])
+        
+        
 
         try {
             const response = await fetch(`https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${location}?unitGroup=metric&key=DUZYGZW839GGCYG4GRFT6XQJG&contentType=json`)
             const data = await response.json()
-            setFetchedData(data)     
+            setFetchedData(data)  
+
         } catch (error) {
             console.log(error)
         }
 
     }
 
+    //for recent searches
+    useEffect(()=>{
+        window.localStorage.setItem('recent', JSON.stringify(searches))
+    }, [searches])
 
+    //
+    
 
+    
+    const lastFiveSearches = searches.slice(-5)
+    
   return (
     <div className='header'>
         <div className='search-wrapper'>
@@ -44,6 +67,15 @@ function Header() {
             />
             <button onClick={handleSubmit}>Search</button> 
         </div>
+        <div className='recent-searches'>
+            <p>Recent Searches:</p> 
+                {
+                    lastFiveSearches.map((data)=>
+                    <p>{data}</p>
+                    )
+                }
+        </div>
+        
         
     </div>
   )
