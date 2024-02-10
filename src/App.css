@@ -1,0 +1,35 @@
+
+
+div.header{
+    background-color: aqua;
+    width: 100%;
+}
+
+div.weather-info-wrapper h1{
+    text-align: center;
+    padding: 25px 0;
+}
+div.weather-card-wrapper{
+    display: flex;
+    width: 1170px;
+    margin: auto;
+    border: 1px solid black;
+    justify-content: center;
+    gap: 40px;
+    height: 50vh;
+}
+
+div.weather-card-left{
+    background-color: aqua;
+    width: 500px;
+}
+
+div.weather-card-right{
+    background-color: blue;
+    width: 500px;
+}
+
+
+div.past-weather-info{
+    border: 1px solid black;
+}
