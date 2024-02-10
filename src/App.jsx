@@ -4,10 +4,13 @@ import cloudy from './assets/static/cloudy-day-1.svg'
 import Header from './components/Header'
 import { useContext } from 'react'
 import WeatherContext from './context/WeatherContext'
+import { Route, Routes } from 'react-router-dom'
 
 
 
 function App() {
+
+  
 
   const {fetchedData} = useContext(WeatherContext)
 const {resolvedAddress, description, currentConditions, days} = fetchedData
@@ -23,6 +26,8 @@ const today = days[0]
  
  
 
+
+  
 
   return (
   <div className='app-wrapper'>
@@ -87,6 +92,7 @@ const today = days[0]
       </div>
   </div>
   )
+  
 }
 
 export default App

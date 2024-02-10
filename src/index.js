@@ -4,12 +4,22 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import WeatherContextProvider from './context/WeatherContextProvider';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import Graph from './pages/Graph';
+import Layout from './Layout';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <WeatherContextProvider>
-    <App />
+      <BrowserRouter>
+      <Routes>
+        <Route path='/' element={<Layout />}>
+        <Route index element={<App />} />
+        <Route path='/graph' element={<Graph />} />
+        </Route>
+    </Routes>
+    </BrowserRouter>
     </WeatherContextProvider>
   
   </React.StrictMode>

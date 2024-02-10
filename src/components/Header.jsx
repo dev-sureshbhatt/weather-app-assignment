@@ -30,9 +30,10 @@ function Header() {
 
     async function handleSubmit(){
         
+        //for recent searches
         setSearches([...searches, location])
         
-        
+        //
 
         try {
             const response = await fetch(`https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${location}?unitGroup=metric&key=DUZYGZW839GGCYG4GRFT6XQJG&contentType=json`)
@@ -49,13 +50,9 @@ function Header() {
     useEffect(()=>{
         window.localStorage.setItem('recent', JSON.stringify(searches))
     }, [searches])
-
-    //
-    
-
     
     const lastFiveSearches = searches.slice(-5)
-    
+    //
   return (
     <div className='header'>
         <div className='search-wrapper'>
