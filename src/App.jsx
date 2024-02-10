@@ -11,8 +11,10 @@ function App() {
 
   const {fetchedData} = useContext(WeatherContext)
 const {resolvedAddress, description, currentConditions, days} = fetchedData
-const {feelslike, humidity, temp, winddir, windspeed} = currentConditions
+const {conditions, feelslike, humidity, temp, winddir, windspeed} = currentConditions
 console.log("humidity", humidity, "resolved address is", resolvedAddress, "descriotion is", description, "feels",feelslike, "temp:", temp, "wind direction is", winddir, "windspeed is", windspeed)
+
+const today = days[0]
 
 
  const currentDate0 = new Date()
@@ -32,10 +34,11 @@ console.log("humidity", humidity, "resolved address is", resolvedAddress, "descr
             <p>{currentDate}</p>
             <img className='svg'
               src={cloudy}></img>
+              <p>{conditions}</p>
               <p className='temp-display'>{temp}</p>
             <p>Feels Like: {feelslike}</p>
             
-            <p>{description}</p>
+            
             
             
             
@@ -43,6 +46,16 @@ console.log("humidity", humidity, "resolved address is", resolvedAddress, "descr
           <div className='weather-card-right'>
             
             <div className='other-info'>
+            <p>{description}</p>
+
+            <div className='other-info-copies'>
+                <div>Temperature max</div>
+                <div>{today.tempmax}</div>
+              </div>
+              <div className='other-info-copies'>
+                <div>Temperature min</div>
+                <div>{today.tempmin}</div>
+              </div>
               <div className='other-info-copies'>
                 <div>Humidity</div>
                 <div>{humidity}</div>
@@ -55,10 +68,7 @@ console.log("humidity", humidity, "resolved address is", resolvedAddress, "descr
                 <div>WindSpeed</div>
                 <div>{windspeed}</div>
               </div>
-              <div className='other-info-copies'>
-                <div>Temp</div>
-                <div>Temp</div>
-              </div>
+              
               </div>
             
             

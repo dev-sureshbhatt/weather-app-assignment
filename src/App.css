@@ -87,6 +87,7 @@ div.weather-card-right{
     justify-content: center;
     align-items: center;
     display: flex;
+    margin-right: 30px;
     /* border: 1px solid black; */
 }
 

@@ -1,9 +1,19 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useContext } from 'react'
 import WeatherContext from '../context/WeatherContext'
 import searchbtn from '../assets/Other/search-svg.svg' 
 
 function Header() {
+
+    useEffect(()=>{
+        fetch('https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/Noida?unitGroup=metric&key=DUZYGZW839GGCYG4GRFT6XQJG&contentType=json')
+        .then((response)=>{
+            response.json().then(info=>setFetchedData(info))
+        })
+        .catch((err)=>{
+            console.log(err)
+        })
+    }, [])
 
     const {fetchedData, setFetchedData} = useContext(WeatherContext)
 
