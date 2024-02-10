@@ -31,7 +31,7 @@ const today = days[0]
 
   return (
   <div className='app-wrapper'>
-      <Header />
+      
 
       <div className='weather-info-wrapper'>
         <h1>{resolvedAddress}</h1>
