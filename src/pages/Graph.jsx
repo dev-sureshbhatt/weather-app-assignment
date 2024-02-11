@@ -121,7 +121,7 @@ const bihar = obj[12]
 const manipur = obj[13]
 const meghalaya = obj[14]
 
-console.log("cities are ",Chattisgarh, Mumbai, Uttarakhand, Assam, Kerala, Tamilnadu, uttarpradesh, himachal, haryana, punjab, sikkim, rajasthan, bihar, manipur, meghalaya)
+console.log("cities are ", Chattisgarh, Mumbai, Uttarakhand, Assam, Kerala, Tamilnadu, uttarpradesh, himachal, haryana, punjab, sikkim, rajasthan, bihar, manipur, meghalaya)
 
 
   return(

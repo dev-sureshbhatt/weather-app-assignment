@@ -42,7 +42,46 @@ div.header div.search-wrapper{
     gap: 20px;
     width: 100%;
     height: fit-content;
+
+    /* background-color: black; */
     /* margin: 20px 10px */
+}
+@media screen and (max-width: 585px) {
+    div.header div.search-wrapper{
+        flex-direction: column;
+    }
+    
+    div.recent-searches{
+        display: none;
+    }
+    
+    div.weather-info-wrapper h1{
+        text-align: center;
+        font-size: 25px;
+        color: white;
+    }
+    div.graph-tool-link span{
+        display: none;
+    }
+
+
+    div.header input{
+    
+        width: 70vw;
+        /* font-size: large; */
+        font-size: 20px;
+    
+        
+    } 
+    div.header div.search-wrapper button{
+        /* height:fit-content; */
+    
+        
+        /* size: 20px; */
+        /* background-color: white; */
+        padding: 5px 20px;
+    }
+    
 }
 
 div.header div.search-wrapper button{
@@ -69,6 +108,7 @@ div.weather-card-wrapper{
     border: 1px solid black;
     justify-content: center;
     gap: 40px;
+    /* height: 80vh; */
     height: auto;
 
 
@@ -78,6 +118,27 @@ div.weather-card-wrapper{
     background-color: rgba(255, 255, 255, 0.75);
     border-radius: 12px;
     border: 1px solid rgba(209, 213, 219, 0.3)
+
+
+    
+}
+@media screen and (max-width: 750px ) {
+
+    div.weather-card-wrapper{
+        flex-direction: column;
+        width: 60vw;
+    }
+
+    p.temp-display{
+        font-size: 50px;
+    }
+
+    div.celcius-farh{
+        font-size: 20px;
+    }
+    div.other-info-copes{
+        /* font-size: 1px; */
+    }
 
 
     
@@ -172,4 +233,20 @@ div.celcius-farh span{
     font-size: x-large;
     color: blue;
     cursor: pointer;
+}
+
+div.graph-tool-link{
+    margin-top: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+
+}
+div.graph-tool-link span{
+    color: blue;
+    text-decoration: underline;
+    cursor: pointer;
+    /* margin-bottom: 20px; */
+
 }

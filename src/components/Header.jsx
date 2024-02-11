@@ -2,8 +2,9 @@ import React, { useEffect, useState } from 'react'
 import { useContext } from 'react'
 import WeatherContext from '../context/WeatherContext'
 import searchbtn from '../assets/Other/search-svg.svg' 
+import { Link } from 'react-router-dom'
 
-export const API = '697ZAQWQXBTUSMUMCYF4HC32Q'
+export const API = 'HWB5GA4SHBXFBP9BF9VVZZZT2'
 
 function Header() {
 
@@ -71,6 +72,8 @@ function Header() {
     }, [searches])
     
     const lastFiveSearches = searches.slice(-5)
+
+
     //
   return (
     <div className='header'>
@@ -83,7 +86,17 @@ function Header() {
             />
             <button onClick={handleSubmit}>Search</button> 
         </div>
+        <div className='graph-tool-link'>
+            <Link to={'/graph'}>
+            <span>Multiple locations weather data</span>
+            </Link>
+            <Link to={'/'}>
+            <span>Search a location</span>
+            </Link>
+            
+        </div>
         <div className='recent-searches'>
+            
             <p>Recent Searches:</p> 
                 {
                     lastFiveSearches.map((data)=>

@@ -48,6 +48,7 @@ function switchtoF(){
 
       <div className='weather-info-wrapper'>
         <h1>{resolvedAddress}</h1>
+        
         <div className='weather-card-wrapper'>
           <div className='weather-card-left'>
             <p>{currentDate}</p>
@@ -62,7 +63,8 @@ function switchtoF(){
               <span onClick={switchtoC}>°C</span>
               <span onClick={switchtoF}>°F</span>
               </div>
-            <p>Feels Like: {feelslike}</p>
+              {(unitF)?(<p>Feels Like: {(feelslike*9/5)+32}°F</p>):(<p>Feels Like: {feelslike}°C</p>)}
+            
             
             
             
@@ -76,11 +78,12 @@ function switchtoF(){
 
             <div className='other-info-copies'>
                 <div>Temperature max</div>
-                <div>{today.tempmax}</div>
+                {(unitF)?(<div>{(today.tempmax*9/5)+32}°F</div>):(<div>{today.tempmax}°C</div>)}
+                
               </div>
               <div className='other-info-copies'>
                 <div>Temperature min</div>
-                <div>{today.tempmin}</div>
+                {(unitF)?(<div>{(today.tempmin*9/5)+32}°F</div>):(<div>{today.tempmin}°C</div>)}
               </div>
               <div className='other-info-copies'>
                 <div>Humidity</div>
