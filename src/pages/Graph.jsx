@@ -95,6 +95,34 @@ locationSpecificCondition[index] = locationData[index].currentConditions.conditi
 console.log(locationSpecificAddress, locationSpecificTemp, locationSpecificCondition, locationSpecificSunrise, locationSpecificSunset)
 
 
+
+const finalArray = locationSpecificAddress.map((e, i) => [e,locationSpecificTemp[i],locationSpecificCondition[i],locationSpecificSunrise[i],locationSpecificSunset[i]]);
+console.log(finalArray);
+
+
+const obj = {}
+Object.assign(obj, finalArray)
+console.log("obj is", obj)
+
+const Chattisgarh = obj[0]
+const Mumbai = obj[1]
+const Uttarakhand = obj[2]
+const Assam = obj[3]
+const Kerala = obj[4]
+const Tamilnadu = obj[5]
+const uttarpradesh = obj[6]
+const himachal = obj[7]
+const haryana = obj[8]
+const punjab = obj[9]
+const sikkim = obj[10]
+const rajasthan = obj[11]
+const bihar = obj[12]
+const manipur = obj[13]
+const meghalaya = obj[14]
+
+console.log(Chattisgarh, Mumbai, Uttarakhand, Assam, Kerala, Tamilnadu, uttarpradesh, himachal, haryana, punjab, sikkim, rajasthan, bihar, manipur, meghalaya)
+
+
   return (
     <div className='graph-page-wrapper'>
          
