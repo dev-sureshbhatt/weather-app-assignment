@@ -123,17 +123,30 @@ const meghalaya = obj[14]
 console.log(Chattisgarh, Mumbai, Uttarakhand, Assam, Kerala, Tamilnadu, uttarpradesh, himachal, haryana, punjab, sikkim, rajasthan, bihar, manipur, meghalaya)
 
 
-  return (
+  return(
     <div className='graph-page-wrapper'>
-         
-      {
-                    location.map((data)=>
-                    <StateInfo value={{location: data}} />
-                    
-                    )
-                }
-    </div>
+
+      <StateInfo value={{"target": Chattisgarh}}/>
+
+      {/* {
+        Chattisgarh.map((data)=>{
+          <StateInfo />
+        })
+      } */}
+</div>
   )
+
+  // return (
+  //   <div className='graph-page-wrapper'>
+         
+  //     {
+  //                   location.map((data)=>
+  //                   <StateInfo value={{location: data}} />
+                    
+  //                   )
+  //               }
+  //   </div>
+  // )
 
 
 
