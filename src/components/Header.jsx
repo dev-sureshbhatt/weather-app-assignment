@@ -8,7 +8,20 @@ function Header() {
     useEffect(()=>{
         fetch('https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/Noida?unitGroup=metric&key=DUZYGZW839GGCYG4GRFT6XQJG&contentType=json')
         .then((response)=>{
-            response.json().then(info=>setFetchedData(info))
+            if (response.ok)
+            {response.json().then(info=>setFetchedData(info)).catch((err)=>{console.log(err)})} else
+            {
+                response.text().then((response)=>{
+                    
+                    if (response === "You have exceeded the maximum number of daily result records for your account. Please add a credit card to continue retrieving results.")
+                    {alert("Our server is receiving too many requests, please try again after some time")}
+                }
+
+                    
+
+                ).catch(err => console.log(err))
+                
+            }
         })
         .catch((err)=>{
             console.log(err)
