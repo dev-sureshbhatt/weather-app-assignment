@@ -7,10 +7,17 @@ import WeatherContextProvider from './context/WeatherContextProvider';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Graph from './pages/Graph';
 import Layout from './Layout';
+import MultipleLocationContextProvider from './context/MultipleLocationContextProvider';
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
+
+
+  
   <React.StrictMode>
+    
+    <MultipleLocationContextProvider>
     <WeatherContextProvider>
       <BrowserRouter>
       <Routes>
@@ -21,6 +28,7 @@ root.render(
     </Routes>
     </BrowserRouter>
     </WeatherContextProvider>
+    </MultipleLocationContextProvider>
   
   </React.StrictMode>
 );
