@@ -22,12 +22,20 @@ export default function StateInfo({value}) {
 
 <>
     {
-      (isHot) ? (<div style={{backgroundColor: 'blue'}}className='state-card'>
-    <p className='state-card-country-name'>{value?.target[0]}</p>
-    <p className='state-card-temp-display'>{value?.target[1]}</p>
+      (isHot) ? (
+      
+    <div 
+      style={{backgroundColor: 'blue'}}
+      className='state-card'>
+    
+        <p className='state-card-country-name'>{value?.target[0]}</p>
+        <p className='state-card-temp-display'>{value?.target[1]}°C</p>
+        <p>{value?.target[2]}</p>
   </div>) : (<div style={{backgroundColor: 'red'}}className='state-card'>
     <p className='state-card-country-name'>{value?.target[0]}</p>
-    <p className='state-card-temp-display'>{value?.target[1]}</p>
+    <p className='state-card-temp-display'>{value?.target[1]}°C</p>
+    <p>{value?.target[2]}</p>
+    
   </div>)}
   </>      
   )
