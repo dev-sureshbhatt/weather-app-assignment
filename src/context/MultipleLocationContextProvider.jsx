@@ -8,10 +8,10 @@ export default function MultipleLocationContextProvider({children}) {
 
 
 
-const [multpleLocationData, setMultipleLocationData] = useState([{},{},{},{},{},{},{},{},{},{},{},{},{},{},{}])
+const [multipleLocationData, setMultipleLocationData] = useState([{data: {currentConditions: {}}}])
 
   return (
-    <MultipleLocationContext.Provider value={{multpleLocationData, setMultipleLocationData}}>
+    <MultipleLocationContext.Provider value={{multipleLocationData, setMultipleLocationData}}>
     {children}
     </MultipleLocationContext.Provider>
   )

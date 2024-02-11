@@ -3,10 +3,14 @@ import { useContext } from 'react'
 import WeatherContext from '../context/WeatherContext'
 import searchbtn from '../assets/Other/search-svg.svg' 
 
+export const API = '69a7ZAQWQXBTUSMUMCYF4HC32Q'
+
 function Header() {
+    
+    const {setFetchedData} = useContext(WeatherContext)
 
     useEffect(()=>{
-        fetch('https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/Noida?unitGroup=metric&key=DUZYGZW839GGCYG4GRFT6XQJG&contentType=json')
+        fetch(`https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/Noida?unitGroup=metric&key=${API}&contentType=json`)
         .then((response)=>{
             if (response.ok)
             {response.json().then(info=>setFetchedData(info)).catch((err)=>{console.log(err)})} else
@@ -30,7 +34,7 @@ function Header() {
 
     }, [])
 
-    const {setFetchedData} = useContext(WeatherContext)
+   
 
 
   
@@ -49,7 +53,7 @@ function Header() {
         //
 
         try {
-            const response = await fetch(`https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${location}?unitGroup=metric&key=DUZYGZW839GGCYG4GRFT6XQJG&contentType=json`)
+            const response = await fetch(`https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${location}?unitGroup=metric&key=${API}&contentType=json`)
             const data = await response.json()
             setFetchedData(data)  
 
