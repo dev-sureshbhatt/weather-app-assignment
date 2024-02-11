@@ -56,13 +56,11 @@ p.temp-display{
     margin: 0 0;
 }
 
-div.weather-info-wrapper h1{
-    color: white;
-}
 
 div.weather-info-wrapper h1{
     text-align: center;
     padding: 25px 0;
+    color: white;
 }
 div.weather-card-wrapper{
     display: flex;
@@ -71,7 +69,7 @@ div.weather-card-wrapper{
     border: 1px solid black;
     justify-content: center;
     gap: 40px;
-    height: 48vh;
+    height: auto;
 
 
 
@@ -167,4 +165,11 @@ div.state-card{
     /* margin-bottom: 20px; */
     /* margin: 10px 50px; */
     /* padding: 10px auto; */
+}
+
+div.celcius-farh span{
+    margin: 20px 20px;
+    font-size: x-large;
+    color: blue;
+    cursor: pointer;
 }

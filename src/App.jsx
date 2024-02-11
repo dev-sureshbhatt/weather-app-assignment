@@ -23,11 +23,24 @@ const today = days[0]
 
  const currentDate0 = new Date()
  const currentDate = currentDate0.toDateString()
- 
- 
 
 
-  
+const [unitF, setUnitF] = useState(false)  
+
+
+// function switchUnit(){
+//   console.log("switching")
+//   setUnitF(!unitF)
+// }
+
+function switchtoC(){
+  setUnitF(false) 
+
+}
+function switchtoF(){
+  setUnitF(true)  
+}
+
 
   return (
   <div className='app-wrapper'>
@@ -41,7 +54,14 @@ const today = days[0]
             <img className='svg'
               src={cloudy}></img>
               <p>{conditions}</p>
-              <p className='temp-display'>{temp}</p>
+              
+
+                {(unitF)? (<p className='temp-display'>{(temp*9/5)+32}°F</p>) : (<p className='temp-display'>{temp}°C</p>) }
+              
+              <div className='celcius-farh'>
+              <span onClick={switchtoC}>°C</span>
+              <span onClick={switchtoF}>°F</span>
+              </div>
             <p>Feels Like: {feelslike}</p>
             
             
