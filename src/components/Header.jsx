@@ -3,9 +3,11 @@ import { useContext } from 'react'
 import WeatherContext from '../context/WeatherContext'
 import searchbtn from '../assets/Other/search-svg.svg' 
 
-export const API = '697ZAQWQXBTUSMUMCYF4HC32Q'
+export const API = '697ZAQWQXBTUSaMUMCYF4HC32Q'
 
 function Header() {
+
+    
     
     const {setFetchedData} = useContext(WeatherContext)
 

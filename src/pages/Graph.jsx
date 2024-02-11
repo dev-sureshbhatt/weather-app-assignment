@@ -104,6 +104,7 @@ const obj = {}
 Object.assign(obj, finalArray)
 console.log("obj is", obj)
 
+
 const Chattisgarh = obj[0]
 const Mumbai = obj[1]
 const Uttarakhand = obj[2]
@@ -120,13 +121,28 @@ const bihar = obj[12]
 const manipur = obj[13]
 const meghalaya = obj[14]
 
-console.log(Chattisgarh, Mumbai, Uttarakhand, Assam, Kerala, Tamilnadu, uttarpradesh, himachal, haryana, punjab, sikkim, rajasthan, bihar, manipur, meghalaya)
+console.log("cities are ",Chattisgarh, Mumbai, Uttarakhand, Assam, Kerala, Tamilnadu, uttarpradesh, himachal, haryana, punjab, sikkim, rajasthan, bihar, manipur, meghalaya)
 
 
   return(
     <div className='graph-page-wrapper'>
 
       <StateInfo value={{"target": Chattisgarh}}/>
+      <StateInfo value={{"target": Mumbai}}/>
+      <StateInfo value={{"target": Uttarakhand}}/>
+      <StateInfo value={{"target": Assam}}/>
+      <StateInfo value={{"target": Kerala}}/>
+      <StateInfo value={{"target": Tamilnadu}}/>
+      <StateInfo value={{"target": uttarpradesh}}/>
+      <StateInfo value={{"target": himachal}}/>
+      <StateInfo value={{"target": haryana}}/>
+      <StateInfo value={{"target": punjab}}/>
+      <StateInfo value={{"target": sikkim}}/>
+      <StateInfo value={{"target": rajasthan}}/>
+      <StateInfo value={{"target": bihar}}/>
+      <StateInfo value={{"target": manipur}}/>
+      <StateInfo value={{"target": meghalaya}}/>
+
 
       {/* {
         Chattisgarh.map((data)=>{
