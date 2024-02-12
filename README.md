@@ -24,7 +24,7 @@ Achievements:
 - Created another feature (URL: /graph) that displays weather data for 15 states: Implemented Axios for sending bulk requests and destructured/formatted the data to display on the UI.
 - Used React hooks such as useEffect() and useContext() to create global state of the information fetched from API and used it later on components (wherever required)  
 
+![alt text](<Screenshot 2024-02-12 091450.png>)
 
-![alt text](<../Screenshot 2024-02-12 091450.png>)
-![alt text](<../Screenshot 2024-02-12 091601.png>)
-![alt text](<../Screenshot 2024-02-12 091630.png>)
+![alt text](<Screenshot 2024-02-12 091601.png>)
+![alt text](<Screenshot 2024-02-12 091630.png>)
