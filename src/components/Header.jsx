@@ -58,11 +58,31 @@ function Header() {
 
         try {
             const response = await fetch(`https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${location}?unitGroup=metric&key=${API}&contentType=json`)
+            
+            if (response.ok == false) {
+
+                const message = await response.text()
+                
+                switch (message) {
+                    case "Bad API Request:Invalid location parameter value.":
+                        alert('please enter a valid location')
+                        break;
+                }
+
+
+
+                console.log(message)
+
+            }
+
+
             const data = await response.json()
             setFetchedData(data)  
 
         } catch (error) {
-            console.log(error)
+            
+
+            console.log("error is", error)
         }
 
     }
