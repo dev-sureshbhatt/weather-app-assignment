@@ -28,3 +28,5 @@ Achievements:
 
 ![alt text](<Screenshot 2024-02-12 091601.png>)
 ![alt text](<Screenshot 2024-02-12 091630.png>)
+![alt text](<Screenshot 2024-02-14 123949.png>) 
+![alt text](<Screenshot 2024-02-14 124027.png>)
